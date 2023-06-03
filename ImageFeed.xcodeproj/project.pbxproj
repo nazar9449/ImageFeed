@@ -43,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		720EE49A2A183B600050BEE8 /* SingleImageView */ = {
+			isa = PBXGroup;
+			children = (
+				72163F1529E1848B0051BA1D /* SingleImageViewController.swift */,
+			);
+			path = SingleImageView;
+			sourceTree = "<group>";
+		};
 		723FB58229D0688F00C3C8A0 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +70,7 @@
 		723FB58D29D0688F00C3C8A0 /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				720EE49A2A183B600050BEE8 /* SingleImageView */,
 				72913B3729D0E39D00D96955 /* ImagesList */,
 				723FB58E29D0689000C3C8A0 /* AppDelegate.swift */,
 				723FB59029D0689000C3C8A0 /* SceneDelegate.swift */,
@@ -87,7 +96,6 @@
 			children = (
 				72913B3529D0E35700D96955 /* ImagesListCell.swift */,
 				723FB59229D0689000C3C8A0 /* ImagesListViewController.swift */,
-				72163F1529E1848B0051BA1D /* SingleImageViewController.swift */,
 			);
 			path = ImagesList;
 			sourceTree = "<group>";
