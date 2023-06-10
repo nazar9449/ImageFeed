@@ -1,31 +1,25 @@
 import UIKit
 
-extension SingleImageViewController: UIScrollViewDelegate {
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        imageView
-    }
-}
-
-
 final class SingleImageViewController: UIViewController {
     var image: UIImage! {
         didSet {
             guard isViewLoaded else { return }
             imageView.image = image
+            rescaleAndCenterImageInScrollView(image: image)
+
         }
     }
     
     @IBOutlet var imageView: UIImageView!
-    
     @IBOutlet var scrollView: UIScrollView!
     
-    @IBAction private func didTapBackButton() {
-        dismiss(animated: true, completion: nil)
-    }
-    @IBAction func didTapShareButton(_ sender: UIButton) {
-        let share = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-        present(share, animated: true, completion: nil)
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        imageView.image = image
+        rescaleAndCenterImageInScrollView(image: image)
+        
+        scrollView.minimumZoomScale = 0.1 // min значение зума картинки
+        scrollView.maximumZoomScale = 1.25 // max значение зума картинки
     }
     
     private func rescaleAndCenterImageInScrollView(image: UIImage) {
@@ -45,11 +39,19 @@ final class SingleImageViewController: UIViewController {
         scrollView.setContentOffset(CGPoint(x: x, y: y), animated: false)
     }
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        imageView.image = image
+    @IBAction private func didTapBackButton() {
+        dismiss(animated: true, completion: nil)
     }
+    @IBAction func didTapShareButton(_ sender: UIButton) {
+        let share = UIActivityViewController(activityItems: [image!], applicationActivities: [])
+        present(share, animated: true, completion: nil)
+
+    }
+    
 }
 
-
+extension SingleImageViewController: UIScrollViewDelegate {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        imageView
+    }
+}

@@ -1,7 +1,6 @@
 import UIKit
 
 final class ImagesListViewController: UIViewController {
-    
     private let ShowSingleImageSegueIdentifier = "ShowSingleImage"
     
     private lazy var dateFormatter: DateFormatter = {
@@ -11,12 +10,11 @@ final class ImagesListViewController: UIViewController {
         return formatter
     }()
     
-    private let photoName: [String] = Array(0..<20).map{ "\($0)" }
 
     @IBOutlet private var tableView: UITableView!
     
+    private let photoName: [String] = Array(0..<20).map{ "\($0)" }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.contentInset = UIEdgeInsets(top:12, left:0, bottom: 12, right:0)
@@ -30,8 +28,7 @@ final class ImagesListViewController: UIViewController {
             let viewController = segue.destination as! SingleImageViewController
             let indexPath = sender as! IndexPath
             let image = UIImage(named: photoName[indexPath.row])
-            _ = viewController.view
-            viewController.imageView.image = image
+            viewController.image = image
         } else {
             super.prepare(for: segue, sender: sender)
         }
