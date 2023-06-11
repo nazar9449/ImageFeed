@@ -2,6 +2,7 @@ import UIKit
 
 final class ImagesListViewController: UIViewController {
     private let ShowSingleImageSegueIdentifier = "ShowSingleImage"
+
     
     private lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
