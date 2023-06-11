@@ -29,6 +29,7 @@ final class ProfileViewController: UIViewController {
         ])
     }
     
+
     func makeAvatarImage() -> UIImageView { // добавляем аватарку пользователя
         let avatarImage = UIImageView(image: UIImage(named: "Photo"))
         view.addSubview(avatarImage)
