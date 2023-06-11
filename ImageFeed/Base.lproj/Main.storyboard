@@ -144,8 +144,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzN-0d-kMY">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="5WT-Qd-vcG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="5WT-Qd-vcG">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="132"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -153,6 +153,7 @@
                                     <constraint firstItem="5WT-Qd-vcG" firstAttribute="leading" secondItem="lzN-0d-kMY" secondAttribute="leading" id="JN0-wE-LxT"/>
                                     <constraint firstAttribute="bottom" secondItem="5WT-Qd-vcG" secondAttribute="bottom" id="RlD-my-U22"/>
                                     <constraint firstItem="5WT-Qd-vcG" firstAttribute="top" secondItem="lzN-0d-kMY" secondAttribute="top" id="ji6-bB-eLB"/>
+                                    <constraint firstItem="5WT-Qd-vcG" firstAttribute="centerX" secondItem="lzN-0d-kMY" secondAttribute="centerX" id="w8u-EW-rlM"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="npl-aG-cGP"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="R4E-zd-5MN"/>
@@ -188,8 +189,8 @@
                             <constraint firstItem="lzN-0d-kMY" firstAttribute="leading" secondItem="YJo-WT-Hjh" secondAttribute="leading" id="0dP-1K-ivB"/>
                             <constraint firstItem="oua-1E-L0x" firstAttribute="centerX" secondItem="Hin-7P-nQj" secondAttribute="centerX" id="4xq-3s-cpJ"/>
                             <constraint firstItem="YJo-WT-Hjh" firstAttribute="trailing" secondItem="lzN-0d-kMY" secondAttribute="trailing" id="8BH-ue-HIh"/>
-                            <constraint firstItem="YJo-WT-Hjh" firstAttribute="bottom" secondItem="lzN-0d-kMY" secondAttribute="bottom" id="9NX-Xv-CwO"/>
-                            <constraint firstItem="lzN-0d-kMY" firstAttribute="top" secondItem="YJo-WT-Hjh" secondAttribute="top" identifier="ImageView" id="VWv-69-w5x"/>
+                            <constraint firstAttribute="bottom" secondItem="lzN-0d-kMY" secondAttribute="bottom" id="9NX-Xv-CwO"/>
+                            <constraint firstItem="lzN-0d-kMY" firstAttribute="top" secondItem="Hin-7P-nQj" secondAttribute="top" identifier="ImageView" id="VWv-69-w5x"/>
                             <constraint firstItem="248-cM-GIV" firstAttribute="leading" secondItem="Hin-7P-nQj" secondAttribute="leadingMargin" id="YZp-o4-f4Y"/>
                             <constraint firstItem="YJo-WT-Hjh" firstAttribute="bottom" secondItem="oua-1E-L0x" secondAttribute="bottom" constant="36" id="b2U-pT-MvT"/>
                             <constraint firstItem="248-cM-GIV" firstAttribute="top" secondItem="YJo-WT-Hjh" secondAttribute="top" constant="22" id="if3-G1-z22"/>
