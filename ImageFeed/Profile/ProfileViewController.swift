@@ -14,7 +14,7 @@ final class ProfileViewController: UIViewController {
         NSLayoutConstraint.activate([
             avatarImage.heightAnchor.constraint(equalToConstant: 70),
             avatarImage.widthAnchor.constraint(equalToConstant: 70),
-            avatarImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 76),
+            avatarImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32),
             avatarImage.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             username.topAnchor.constraint(equalTo: avatarImage.bottomAnchor, constant: 8),
             username.leadingAnchor.constraint(equalTo: avatarImage.leadingAnchor),
