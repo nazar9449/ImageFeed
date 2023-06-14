@@ -222,16 +222,18 @@
                                     <constraint firstAttribute="width" constant="60" id="sJ8-7S-Lmv"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9Z-1I-jJD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9Z-1I-jJD">
                                 <rect key="frame" x="16" y="680" width="361" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="XH5-GK-PGl"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Войти">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Войти">
+                                    <color key="titleColor" name="YP Black"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="16"/>
@@ -294,13 +296,27 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwr-Ss-80o">
+                                <rect key="frame" x="9" y="9" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="BNR-Fv-nRs"/>
+                                    <constraint firstAttribute="height" constant="24" id="u2q-zt-dtP"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="nav_back_button"/>
+                                <connections>
+                                    <action selector="didTapBackButton:" destination="zf3-4W-arg" eventType="touchUpInside" id="cpP-Gq-VRW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ezl-pv-xbv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="nwr-Ss-80o" firstAttribute="top" secondItem="ezl-pv-xbv" secondAttribute="top" constant="9" id="0Sa-GP-R3B"/>
                             <constraint firstItem="nv6-2K-ABv" firstAttribute="top" secondItem="16x-jK-T74" secondAttribute="top" id="3NH-34-otb"/>
                             <constraint firstAttribute="bottom" secondItem="nv6-2K-ABv" secondAttribute="bottom" id="ETU-eK-0F4"/>
                             <constraint firstAttribute="trailing" secondItem="nv6-2K-ABv" secondAttribute="trailing" id="VNx-2S-lL8"/>
+                            <constraint firstItem="nwr-Ss-80o" firstAttribute="leading" secondItem="ezl-pv-xbv" secondAttribute="leading" constant="9" id="cFp-6A-RKT"/>
                             <constraint firstItem="nv6-2K-ABv" firstAttribute="leading" secondItem="16x-jK-T74" secondAttribute="leading" id="nnm-Cg-pZB"/>
                         </constraints>
                     </view>
@@ -317,6 +333,7 @@
         <image name="0" width="200" height="132"/>
         <image name="Active" width="42" height="42"/>
         <image name="Backward" width="24" height="24"/>
+        <image name="nav_back_button" width="24" height="24"/>
         <image name="shareButton" width="51" height="50"/>
         <image name="tab_editorial_active" width="30" height="30"/>
         <image name="tab_profile_active" width="30" height="30"/>
