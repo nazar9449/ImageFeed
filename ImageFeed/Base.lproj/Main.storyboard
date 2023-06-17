@@ -241,7 +241,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="zf3-4W-arg" kind="presentation" modalPresentationStyle="overFullScreen" id="GBz-S0-d2g"/>
+                                    <segue destination="zf3-4W-arg" kind="presentation" identifier="ShowWebView" modalPresentationStyle="overFullScreen" id="GBz-S0-d2g"/>
                                 </connections>
                             </button>
                         </subviews>
